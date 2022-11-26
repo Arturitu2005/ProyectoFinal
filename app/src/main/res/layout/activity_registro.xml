@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5A00FA"
+    tools:context=".Registro">
+
+    <TextView
+        android:id="@+id/textViewRName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="18dp"
+        android:background="#05F60F"
+        android:text="@string/Name"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewRlastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="18dp"
+        android:background="#00F80A"
+        android:text="@string/lastName"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextRuserName" />
+
+    <TextView
+        android:id="@+id/textViewRfirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="18dp"
+        android:background="#05FF0F"
+        android:text="@string/firstName"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextELName" />
+
+    <TextView
+        android:id="@+id/textViewRuserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="18dp"
+        android:background="#00FB0A"
+        android:text="@string/userName"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewRMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="18dp"
+        android:background="#00FF0A"
+        android:text="@string/Mail"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextElPassword" />
+
+    <TextView
+        android:id="@+id/textViewRAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="18dp"
+        android:background="#07F410"
+        android:text="@string/Age"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupEL" />
+
+    <TextView
+        android:id="@+id/textViewRNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="18dp"
+        android:background="#00FF0A"
+        android:text="@string/Number"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextRlastName" />
+
+    <TextView
+        android:id="@+id/textViewRGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="18dp"
+        android:background="#03FF0E"
+        android:text="@string/Gender"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextRMail" />
+
+    <TextView
+        android:id="@+id/textViewRType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="45dp"
+        android:background="#00FA0A"
+        android:text="@string/Type"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextRNumber" />
+
+    <TextView
+        android:id="@+id/textViewRPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="88dp"
+        android:background="#00FF0A"
+        android:text="@string/Password"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupRType" />
+
+    <Button
+        android:id="@+id/loginid2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp"
+        android:backgroundTint="#EAB20A"
+        android:onClick="Volver"
+        android:text="@string/back"
+        app:layout_constraintStart_toEndOf="@+id/loginid"
+        app:layout_constraintTop_toBottomOf="@+id/editTextRPassword"
+        app:strokeColor="#000000"
+        app:strokeWidth="2dp" />
+
+    <EditText
+        android:id="@+id/editTextELName"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="12dp"
+        android:background="#EB000000"
+        android:ems="10"
+        android:hint="@string/writeName"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#9F9F9F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRName"
+        tools:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/editTextElPassword"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="12dp"
+        android:background="#EB000000"
+        android:ems="10"
+        android:hint="@string/writefirstName"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#9F9F9F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRfirstName"
+        tools:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/editTextRlastName"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="51dp"
+        android:background="#EB000000"
+        android:ems="10"
+        android:hint="@string/writelastName"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#9F9F9F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRlastName"
+        tools:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/editTextRuserName"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="51dp"
+        android:background="#EB000000"
+        android:ems="10"
+        android:hint="@string/writeuserName"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#9F9F9F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRuserName"
+        tools:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/editTextRMail"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="12dp"
+        android:background="#EB000000"
+        android:ems="10"
+        android:hint="@string/writeMail"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#9F9F9F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRMail"
+        tools:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/editTextRAge"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="12dp"
+        android:background="#EB000000"
+        android:ems="10"
+        android:hint="@string/writeAge"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#9F9F9F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRAge"
+        tools:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/editTextRNumber"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="51dp"
+        android:background="#EB000000"
+        android:ems="10"
+        android:hint="@string/writeNumber"
+        android:importantForAutofill="no"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#9F9F9F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRNumber"
+        tools:textSize="12sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupEL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRGender">
+
+        <RadioButton
+            android:id="@+id/radioButtonEL1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/writeGender1"
+            android:textColor="#FFFFFF"
+            tools:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonEL2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/writeGender2"
+            android:textColor="#FFFFFF"
+            tools:textSize="12sp" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroupRType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRType">
+
+        <RadioButton
+            android:id="@+id/radioButtonRType1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/writeType1"
+            android:textColor="#FFFFFF"
+            tools:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonRType2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/writeType2"
+            android:textColor="#FFFFFF"
+            tools:textSize="12sp" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editTextRPassword"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="51dp"
+        android:background="#EB000000"
+        android:ems="10"
+        android:hint="@string/writePassword"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#9F9F9F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRPassword"
+        tools:textSize="12sp" />
+
+    <Button
+        android:id="@+id/loginid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="18dp"
+        android:backgroundTint="#FFC107"
+        android:onClick="Registrarse"
+        android:text="@string/register"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextRAge"
+        app:strokeColor="#000000"
+        app:strokeWidth="2dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
