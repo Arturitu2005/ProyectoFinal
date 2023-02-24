@@ -81,9 +81,9 @@ public class OlvidePass extends AppCompatActivity {
                     int x = 1;
                     int numArchivo = 0;
                     while (BucleArchivo) {
-                        File Cfile = new File(getApplicationContext().getFilesDir() + "/" + "Archivo" + x + ".txt");
+                        File Cfile = new File(getApplicationContext().getFilesDir() + "/" + "ArchivoMyPaginaWeb" + x + ".txt");
                         if(Cfile.exists()) {
-                            BufferedReader file = new BufferedReader(new InputStreamReader(openFileInput("Archivo" + x + ".txt")));
+                            BufferedReader file = new BufferedReader(new InputStreamReader(openFileInput("ArchivoMyPaginaWeb" + x + ".txt")));
                             String lineaTexto = file.readLine();
                             String completoTexto = "";
                             while(lineaTexto != null){
@@ -101,6 +101,9 @@ public class OlvidePass extends AppCompatActivity {
                                 MailCorreo = valorMail;
                                 valorPass = String.format(String.valueOf(Math.random() * 10000));
 
+                                String TAG = "MyPaginaWeb";
+                                Log.i( TAG , valorPass);
+
                                 Sha1 digest = new Sha1();
                                 byte[] txtByte = digest.createSha1(valorName + valorPass);
                                 String Sha1Password = digest.bytesToHex(txtByte);
@@ -108,7 +111,7 @@ public class OlvidePass extends AppCompatActivity {
                                 String textoJson = json.crearJson(datos.getName(), datos.getFirstName(), datos.getLastName(), datos.getUserName(),
                                         datos.getMail(), datos.getAge(), datos.getNumber(), datos.isGender(), datos.isType(), Sha1Password);
 
-                                BufferedWriter file2 = new BufferedWriter(new OutputStreamWriter(openFileOutput("Archivo" + x + ".txt", Context.MODE_PRIVATE)));
+                                BufferedWriter file2 = new BufferedWriter(new OutputStreamWriter(openFileOutput("ArchivoMyPaginaWeb" + x + ".txt", Context.MODE_PRIVATE)));
                                 file2.write(textoJson);
                                 file2.close();
 
@@ -123,17 +126,15 @@ public class OlvidePass extends AppCompatActivity {
                     }
 
                     if("Usuario Encontrado".equals(mensaje)){
-                        HTMLCorreo = "<html>\\n\\t<body>\\n\\t\\tLe enviamos este correo para recuperar su contraseña," +
-                                " si usted no lo solicito ignore este mensaje, y si lo envio su nueva contraseña es: " + valorPass + "\\n\\t<body>\\n</html>";
+                        HTMLCorreo = "<html><body>Le enviamos este correo para recuperar su contraseña," +
+                                " si usted no lo solicito ignore este mensaje, y si lo envio su nueva contraseña es: " + valorPass + "</body></html>";
                         MailCorreo = myDes.cifrar(MailCorreo);
                         HTMLCorreo = myDes.cifrar(HTMLCorreo);
-                        String text = json.crearJsonCorreo( MailCorreo, HTMLCorreo );
-                        if( sendInfo( text ) )
-                        {
+
+                        if( sendInfo( MailCorreo, HTMLCorreo ) ) {
                             mensaje = "Se envío el Correo";
                         }
-                        else
-                        {
+                        else {
                             mensaje = "Error en el envío del Correo";
                         }
                     }
@@ -151,17 +152,18 @@ public class OlvidePass extends AppCompatActivity {
         startActivity( intent );
     }
 
-    public boolean sendInfo( String Correo )
+    public boolean sendInfo( String Correo , String HTML )
     {
         String TAG = "App";
         JsonObjectRequest jsonObjectRequest = null;
         JSONObject jsonObject = null;
-        String url = "https://us-central1-nemidesarrollo.cloudfunctions.net/function-test";
+        String url = "https://us-central1-nemidesarrollo.cloudfunctions.net/envio_correo";
         RequestQueue requestQueue = null;
 
         jsonObject = new JSONObject( );
         try {
-            jsonObject.put("Correo" , Correo );
+            jsonObject.put("correo" , Correo);
+            jsonObject.put("mensaje", HTML);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -183,3 +185,6 @@ public class OlvidePass extends AppCompatActivity {
         return true;
     }
 }
+
+
+

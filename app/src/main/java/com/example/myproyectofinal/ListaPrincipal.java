@@ -220,6 +220,12 @@ public class ListaPrincipal extends AppCompatActivity {
                 intent2.putExtra("numContext", 1);
                 startActivity( intent2 );
                 break;
+            case R.id.MenuPokedex:
+                int numArchivo2 = getIntent().getExtras().getInt("numArchivo");
+                Intent intent3 = new Intent (ListaPrincipal.this, Pokedex.class);
+                intent3.putExtra("numArchivo", numArchivo2);
+                startActivity( intent3 );
+                break;
             default:
                 seleccion = "sin opcion %s";
                 Toast.makeText(getBaseContext(), seleccion, Toast.LENGTH_SHORT).show();

@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.myproyectofinal.Cifrado.Des;
 import com.google.gson.Gson;
 
-public class Json extends AppCompatActivity {
+public class Json extends AppCompatActivity{
 
     public static String crearJson(String Name , String firstName , String lastName , String userName , String Mail , int Age , int Number , boolean Gender , boolean Type , String Password ) {
         MyInfo datos = new MyInfo();
@@ -56,17 +56,5 @@ public class Json extends AppCompatActivity {
         MyCuenta datos = gson.fromJson(myDes.desCifrar(textoJson), MyCuenta.class);
 
         return datos;
-    }
-
-    public static String crearJsonCorreo(String Mail , String HTML) {
-        MyCorreo datos = new MyCorreo();
-        Gson gson = new Gson();
-
-        datos.setMailCorreo(Mail);
-        datos.setHTMLCorreo(HTML);
-
-        String nuevojson = gson.toJson(datos);
-
-        return nuevojson;
     }
 }

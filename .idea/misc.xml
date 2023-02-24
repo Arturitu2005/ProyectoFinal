@@ -3,17 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/gohui/AndroidStudioProjects/MyProyectoFinal/app/src/main/res/drawable-v24/pokemon_gradient.xml" value="0.1345" />
         <entry key="..\:/Users/gohui/AndroidStudioProjects/MyProyectoFinal/app/src/main/res/layout/activity_editar_lista.xml" value="0.22327898550724637" />
         <entry key="..\:/Users/gohui/AndroidStudioProjects/MyProyectoFinal/app/src/main/res/layout/activity_list_view_actividad.xml" value="0.22327898550724637" />
         <entry key="..\:/Users/gohui/AndroidStudioProjects/MyProyectoFinal/app/src/main/res/layout/activity_list_view_actividad_borrar.xml" value="0.22327898550724637" />
         <entry key="..\:/Users/gohui/AndroidStudioProjects/MyProyectoFinal/app/src/main/res/layout/activity_list_view_editar.xml" value="0.22327898550724637" />
-        <entry key="..\:/Users/gohui/AndroidStudioProjects/MyProyectoFinal/app/src/main/res/layout/activity_lista_principal.xml" value="0.22327898550724637" />
+        <entry key="..\:/Users/gohui/AndroidStudioProjects/MyProyectoFinal/app/src/main/res/layout/activity_lista_principal.xml" value="0.2" />
         <entry key="..\:/Users/gohui/AndroidStudioProjects/MyProyectoFinal/app/src/main/res/layout/activity_login.xml" value="0.22327898550724637" />
         <entry key="..\:/Users/gohui/AndroidStudioProjects/MyProyectoFinal/app/src/main/res/layout/activity_main.xml" value="0.22327898550724637" />
         <entry key="..\:/Users/gohui/AndroidStudioProjects/MyProyectoFinal/app/src/main/res/layout/activity_olvide_pass.xml" value="0.22327898550724637" />
+        <entry key="..\:/Users/gohui/AndroidStudioProjects/MyProyectoFinal/app/src/main/res/layout/activity_pokedex.xml" value="0.22327898550724637" />
         <entry key="..\:/Users/gohui/AndroidStudioProjects/MyProyectoFinal/app/src/main/res/layout/activity_registro.xml" value="0.4" />
         <entry key="..\:/Users/gohui/AndroidStudioProjects/MyProyectoFinal/app/src/main/res/layout/activity_resgistro.xml" value="0.22327898550724637" />
         <entry key="..\:/Users/gohui/AndroidStudioProjects/MyProyectoFinal/app/src/main/res/layout/activity_welcome.xml" value="0.22327898550724637" />
+        <entry key="..\:/Users/gohui/AndroidStudioProjects/MyProyectoFinal/app/src/main/res/layout/item_pokemon.xml" value="0.22327898550724637" />
         <entry key="..\:/Users/gohui/AndroidStudioProjects/MyProyectoFinal/app/src/main/res/menu/mi_menu.xml" value="0.24947916666666667" />
       </map>
     </option>

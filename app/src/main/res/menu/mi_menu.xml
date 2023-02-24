@@ -9,4 +9,8 @@
         android:id="@+id/MenuCerrarSesionrId"
         android:icon="?attr/actionModeCopyDrawable"
         android:title="@string/menu_copiar" />
+    <item
+        android:id="@+id/MenuPokedex"
+        android:icon="?attr/actionModeCopyDrawable"
+        android:title="Pokedex" />
 </menu>
